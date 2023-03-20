@@ -1,0 +1,45 @@
+{
+  "name": "info-movies",
+  "version": "1.0.0",
+  "description": "Project Web Api to find info about Movies",
+  "scripts": {
+    "lint": "eslint ./src",
+    "lint-fix": "eslint ./src --fix",
+    "build": "webpack --config webpack.prod.js",
+    "build-alt": "webpack",
+    "start-dev": "webpack serve --config webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rhyman18/movie-api.git"
+  },
+  "author": "Ari Budiman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhyman18/movie-api/issues"
+  },
+  "homepage": "https://github.com/rhyman18/movie-api#readme",
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "eslint": "^8.36.0",
+    "eslint-config-google": "^0.14.0",
+    "html-webpack-plugin": "^5.5.0",
+    "image-minimizer-webpack-plugin": "^3.8.2",
+    "mini-css-extract-plugin": "^2.7.5",
+    "purgecss-webpack-plugin": "^5.0.0",
+    "sharp": "^0.31.3",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.2.3"
+  }
+}

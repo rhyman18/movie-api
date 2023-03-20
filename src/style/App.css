@@ -1,0 +1,45 @@
+body {
+    background-color: #fcfcfc;
+}
+
+.my-bgcolor {
+    background-color: #dedede;
+}
+
+.my-ct {
+    padding: 6rem 0;
+}
+
+search-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.my-btn:hover {
+    background-color: #dedede;
+    border-color: #dedede;
+}
+
+.my-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.my-logo {
+    margin-bottom: 3rem;
+    max-width: 40vw;
+}
+
+@media screen and (max-width: 992px) {
+    .my-logo {
+        max-width: 100%;
+    }
+}
