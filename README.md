@@ -8,6 +8,10 @@ Project Web Movie API APP untuk Submission tugas di Dicoding. menggunakan API da
 - `Animate.css` : styling animasi efek unik
 - `Eslint` : membantu clean code javascript
 
+# Deployment Web
+
+Silahkan kunjungi **[https://movie-api-dun.vercel.app](https://movie-api-dun.vercel.app)** untuk melihat hasil jadi Website. Sebagai keterangan website di deploy di Vercel App.
+
 # Versi 1.0.1
 - Menambahkan fitur :
     Fetch API saat event input
