@@ -4,10 +4,13 @@ class MovieList extends HTMLElement {
     this.render();
   }
 
+  stripHtml(dirtyString) {
+    const doc = new DOMParser().parseFromString(dirtyString, 'text/html');
+    return doc.body.textContent || '';
+  }
+
   render() {
-    let desc = (this._movie.show.summary != null) ? this._movie.show.summary.replace(/<p>/gi, '<p class="card-text my-text mb-1">') : '<p class="card-text my-text mb-1">Lupa ditulis.</p>';
-    const n = desc.indexOf('</p>');
-    desc = desc.substring(0, n != -1 ? n : desc.length);
+    const desc = (this._movie.show.summary != null) ? this._movie.show.summary : 'Lupa ditulis.';
     const rate = (this._movie.show.rating.average != null) ? this._movie.show.rating.average : 'No Rating';
     const tamat = (this._movie.show.ended != null) ? `| Tamat : ${this._movie.show.ended}` : '';
     const genres = (this._movie.show.genres.length) ? this._movie.show.genres : 'Movie';
@@ -21,14 +24,14 @@ class MovieList extends HTMLElement {
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">${this._movie.show.name}</h5>
-        ${desc}
+        <p class="card-text my-text mb-1">${this.stripHtml(desc)}</p>
         <p class="card-text">
-          <small class="text-muted">
-            Status: ${this._movie.show.status}<br>
-            Rating: ${rate}<br>
-            Language: ${this._movie.show.language}<br>
-            Genre: ${genres}<br>
-            Rilis : ${this._movie.show.premiered} ${tamat}
+          <small class="text-muted d-flex flex-column">
+            <span>Status: ${this._movie.show.status}</span>
+            <span>Rating: ${rate}</span>
+            <span>Language: ${this._movie.show.language}</span>
+            <span>Genre: ${genres}</span>
+            <span>Rilis : ${this._movie.show.premiered} ${tamat}</span>
           </small>
         </p>
         <a href="${this._movie.show.url}" class="btn btn-primary">Lihat Detail</a>

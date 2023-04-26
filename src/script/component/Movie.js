@@ -47,6 +47,24 @@ class Movie extends HTMLElement {
 </div>
     `;
   }
+
+  // add render loadings
+  renderLoading() {
+    this.innerHTML = `
+<div class="col">
+  <div class="card text-center">
+    <div class="card-body py-4">
+      <h5 class="card-title mb-3">Fetching data</h5>
+      <p class="card-text d-flex justify-content-center">
+        <div class="spinner-grow text-secondary" style="width: 4rem; height: 4rem;" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </p>
+    </div>
+  </div>
+</div>
+    `;
+  }
 }
 
 customElements.define('movie-container', Movie);

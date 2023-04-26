@@ -9,9 +9,9 @@ module.exports = {
     animate: './src/animate.js',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'public'),
     filename: '[name].[contenthash].js',
-    assetModuleFilename: '[name][ext]',
+    assetModuleFilename: '[contenthash][ext]',
     clean: true,
   },
   module: {
