@@ -2,9 +2,8 @@
 Project Web Movie API APP untuk Submission tugas di Dicoding. menggunakan API dari https://www.tvmaze.com/api . Berikut framework dan library yang digunakan :
 
 - `NodeJS` : untuk install framework dan library cli
-- `Webpack` : optimasi performa web. menambahkan: babel, css minification, image minimizer, purge css
+- `Webpack` : optimasi performa web. menambahkan plugin/loader `babel`, `css minification`, `image minimizer`, `purge css`
 - `Bootstrap` : styling web lebih praktis
-- `Flowbite` : styling components untuk tailwind
 - `Animate.css` : styling animasi efek unik
 - `Eslint` : membantu clean code javascript
 
